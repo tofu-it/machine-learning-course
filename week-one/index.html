@@ -1,0 +1,54 @@
+<html>
+  <head>
+
+        <style type="text/css">
+      video {
+        position: fixed;
+        top: 100;
+        left: 100px;
+        display: block;
+        width: 500px;
+        border: 2px solid red;
+        padding: 10px;
+
+      }
+
+      #buttons {
+        position: fixed; 
+        top: 160px; 
+        left: 20px;
+      }
+
+      #console {
+        width: 500px;
+        text-align: center;
+        position: fixed; 
+        top: 10px; 
+        left:100px;
+        padding: 10px;
+        border: 2px solid green;
+      }
+
+    </style>
+
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+
+     <!-- Load the K-Nearest Neighbours Classifier -->
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+  </head>
+  <body>
+    <div id="console"></div>
+    <!-- Add the webcam that we will use to test -->
+    <video autoplay playsinline muted id="webcam" width="450" height="350" ></video>
+    <br>
+    <div id="buttons" style="">
+    <button id="class-a">Add A</button><br><br>
+    <button id="class-b">Add B</button><br><br>
+    <button id="class-c">Add C</button>
+  </div>
+    <!-- Load index.js after the content of the page -->
+    <script src="index.js"></script>
+  </body>
+</html>
